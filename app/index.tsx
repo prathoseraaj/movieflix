@@ -7,10 +7,9 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-      }
-    }
+      }}
     >
-      <Text> Welcome MAMAEEE! </Text>
+      <Text>HELLLOOOOOOOOOOOOOOooooo harshan gayyyyyyyyyyyyyy</Text>
     </View>
   );
 }
