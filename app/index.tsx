@@ -10,7 +10,7 @@ export default function Index() {
       }
     }
     >
-      <Text> Welcome MAMAEEE  </Text>
+      <Text> Welcome MAMAEEE! </Text>
     </View>
   );
 }
