@@ -9,7 +9,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>HELLLOOOOOOOOOOOOOOooooo harshan gayyyyyyyyyyyyyy</Text>
+      <Text>HELLLOOOOOOOOOOO</Text>
     </View>
   );
 }
