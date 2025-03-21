@@ -25,7 +25,4 @@ export const fetchMovies = async ({query} : {query:string}) => {
 
     const data = await response.json();
 
-    
 }
-
-/* const url = 'https://api.themoviedb.org/3/keyword/keyword_id/movies?include_adult=false&language=en-US&page=1' */
