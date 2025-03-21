@@ -1,3 +1,4 @@
+import Searchbar from "@/components/Searchbar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { Link } from "expo-router";
@@ -11,6 +12,9 @@ export default function Index() {
         minHeight: "100%", paddingBottom: 10
       }}>
           <Image source={icons.logo} className="w-12 h-10  mt-20 mb-5 mx-auto"/>
+          <View className="flex-1 mt-5">
+            <Searchbar/>
+          </View>
       </ScrollView>
 
     </View>
