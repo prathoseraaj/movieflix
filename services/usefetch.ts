@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const useFetch = <T>(fetchFunction:()=> Promise<T>, autofetch = true) =>{
     const [data, setData] = useState<T | null > (null);
@@ -29,5 +29,14 @@ const useFetch = <T>(fetchFunction:()=> Promise<T>, autofetch = true) =>{
         setError(null);
     }
 
+    useEffect(() => {
+        if(autofetch){
+            fetchData();
+        }
+    }, [])
+
+    return {data, loading, error, refetch: fetchData , reset}
     
 }
+
+export default useFetch;
