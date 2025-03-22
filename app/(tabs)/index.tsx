@@ -46,7 +46,7 @@ export default function Index() {
               placeholder="search for a movie"
             />
             <>
-              <Text className="text-lg text-white">Latest Movies</Text>
+              <Text className="text-lg text-white font-bold mt-5 mb-3">Latest Movies</Text>
             </>
           </View>
         )}
