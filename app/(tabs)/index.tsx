@@ -20,7 +20,7 @@ export default function Index() {
   return (
     <View className="flex-1 bg-primary">
       <Image source={images.bg} className="absolute w-full z-0" />
-      <View
+      <ScrollView
         className="flex-1 px-5"
         style={{
           paddingBottom: 10,
@@ -40,6 +40,7 @@ export default function Index() {
           <View className="flex-1 mt-5">
             <Searchbar
               onPress={() => {
+                //@ts-ignore
                 router.push("/search");
               }}
               placeholder="search for a movie"
@@ -70,7 +71,7 @@ export default function Index() {
             </>
           </View>
         )}
-      </View>
+      </ScrollView>
     </View>
   );
 }

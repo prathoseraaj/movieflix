@@ -10,13 +10,14 @@ const MovieCard = ({
   release_date,
 }: Movie) => {
   return (
-    <Link href={`movie/${id}`} asChild>
+    //@ts-ignore
+   <Link href={`/movies/${id}`} asChild>
       <TouchableOpacity className="w-[30%]">
         <Image
           source={{
             uri: poster_path
               ? `https://image.tmdb.org/t/p/w500${poster_path}`
-              : `https://placehold.co/600x400/1a1a1a/ffffff.pmg`,
+              : `https://placehold.co/600x400/1a1a1a/ffffff.png`,
           }}
           className="w-full h-52 rounded-lg " 
           resizeMode="cover"
