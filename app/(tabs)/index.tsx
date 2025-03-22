@@ -2,7 +2,7 @@ import Searchbar from "@/components/Searchbar";
 import { icons } from "@/constants/icons";
 import { images } from "@/constants/images";
 import { Link } from "expo-router";
-import { Image, ScrollView, Text, View } from "react-native";
+import { ActivityIndicator, Image, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
 import useFetch from "@/services/usefetch";
 import { fetchMovies } from "@/services/api";
@@ -28,14 +28,28 @@ export default function Index() {
         }}
       >
         <Image source={icons.logo} className="w-12 h-10  mt-20 mb-5 mx-auto" />
-        <View className="flex-1 mt-5">
-          <Searchbar
-            onPress={() => {
-              router.push("/search");
-            }}
-            placeholder="search for a movie"
+
+        {moviesLoding ? (
+          <ActivityIndicator
+            size="large"
+            color="#0000ff"
+            className="mt-10 self-center"
           />
-        </View>
+        ) : moivesError ? (
+          <Text>Error:{moivesError?.message}</Text>
+        ) : (
+          <View className="flex-1 mt-5">
+            <Searchbar
+              onPress={() => {
+                router.push("/search");
+              }}
+              placeholder="search for a movie"
+            />
+            <>
+              <Text className="text-lg text-white">Latest Movies</Text>
+            </>
+          </View>
+        )}
       </ScrollView>
     </View>
   );
