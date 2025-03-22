@@ -10,7 +10,11 @@ import { fetchMovies } from "@/services/api";
 export default function Index() {
   const router = useRouter();
 
-  const {data: movies} = useFetch(()=> fetchMovies({query: ''}))
+  const {
+    data: movies,
+    loading: moviesLoding,
+    error: moivesError,
+  } = useFetch(() => fetchMovies({ query: "" }));
 
   return (
     <View className="flex-1 bg-primary">
@@ -29,7 +33,7 @@ export default function Index() {
             onPress={() => {
               router.push("/search");
             }}
-            placeholder = "search for a movie"
+            placeholder="search for a movie"
           />
         </View>
       </ScrollView>
