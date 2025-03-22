@@ -1,4 +1,4 @@
-import { View, Text, Image, FlatList } from "react-native";
+import { View, Text, Image, FlatList, ActivityIndicator } from "react-native";
 import React from "react";
 import { images } from "@/constants/images";
 import MovieCard from "@/components/MovieCard";
@@ -14,8 +14,8 @@ const search = () => {
 
   const {
     data: movies,
-    loading: moviesLoding,
-    error: moivesError,
+    loading,
+    error,
   } = useFetch(() => fetchMovies({ query: "" }));
   return (
     <View className="flex-1 bg-primary">
@@ -40,6 +40,24 @@ const search = () => {
             <View className="my-5">
               <Searchbar placeholder="search movies..."/>
             </View>
+
+            {loading && (
+              <ActivityIndicator size="large" color='#0000ff' className="my-3"/> 
+            )}
+
+            {error &&(
+              <Text className="text-red-500 px-5 my-3">
+                Error: {error.message}
+              </Text>
+            )}
+
+            {!loading && !error && `SEARCH TERM`.trim() && movies?.length > 0 && (
+              <Text className="text-xl text-white font-bold">
+                Search results for {''}
+                <Text className="text-accent">Search term</Text>
+              </Text>
+            )}
+
           </>
         }
       />
