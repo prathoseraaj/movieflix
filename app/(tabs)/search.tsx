@@ -20,15 +20,17 @@ const search = () => {
   } = useFetch(() => fetchMovies({ query: searchquery }),false);
 
   useEffect(()=>{
-    const func = async() => {
+    const timeoutId = setTimeout (async() => {
       if(searchquery.trim()){
         await loadMovies();
       }
       else{
         reset()
       }
-    }
-    func();
+    }, 500)
+
+    return () => clearTimeout(timeoutId);
+
   },[searchquery]);
 
   return (
@@ -80,6 +82,11 @@ const search = () => {
               </Text>
             )}
           </>
+        }
+        ListEmptyComponent={
+          !loading && ! error ? (
+
+          )
         }
       />
     </View>
