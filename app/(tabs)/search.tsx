@@ -84,9 +84,13 @@ const search = () => {
           </>
         }
         ListEmptyComponent={
-          !loading && ! error ? (
-
-          )
+          !loading && !error ? (
+            <View className="mt-10 px-5">
+              <Text className="text-center text-gray-500">
+                {searchquery.trim() ? 'No Movie Found.' : 'Search for a Movie.'}
+              </Text>
+            </View>
+          ) : null
         }
       />
     </View>
