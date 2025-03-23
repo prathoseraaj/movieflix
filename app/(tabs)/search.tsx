@@ -18,26 +18,25 @@ const search = () => {
     error,
     refetch: loadMovies,
     reset,
-  } = useFetch(() => fetchMovies({ query: searchquery }),false);
+  } = useFetch(() => fetchMovies({ query: searchquery }), false);
 
-  useEffect(()=>{
-
-    const timeoutId = setTimeout (async() => {
-      if(searchquery.trim()){
+  useEffect(() => {
+    const timeoutId = setTimeout(async () => {
+      if (searchquery.trim()) {
         await loadMovies();
-
-        if(movies.length > 0 && movies?.[0])
-          await updateSearchCount(searchquery,movies[0]);
-        
+      } else {
+        reset();
       }
-      else{
-        reset()
-      }
-    }, 500)
+    }, 500);
 
     return () => clearTimeout(timeoutId);
+  }, [searchquery]);
 
-  },[searchquery]);
+  useEffect(() => {
+    if (movies?.length > 0 && movies?.[0]) {
+      updateSearchCount(searchquery, movies[0]);
+    }
+  }, [movies]);
 
   return (
     <View className="flex-1 bg-primary">
@@ -93,7 +92,7 @@ const search = () => {
           !loading && !error ? (
             <View className="mt-10 px-5">
               <Text className="text-center text-gray-500">
-                {searchquery.trim() ? 'No Movie Found.' : 'Search for a Movie.'}
+                {searchquery.trim() ? "No Movie Found." : "Search for a Movie."}
               </Text>
             </View>
           ) : null

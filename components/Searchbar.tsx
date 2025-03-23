@@ -6,7 +6,7 @@ import { icons } from "@/constants/icons";
 interface props{
   placeholder: string;
   onPress?: () => void;
-  value: string;
+  value?: string;
   onChangeText?: (text: string) => void;
 }
 
