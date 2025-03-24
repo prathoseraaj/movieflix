@@ -38,6 +38,9 @@ export const fetchMoiveDetails = async (movieId: string): Promise<MovieDetails> 
         if(!response.ok){
             throw new Error('Failed to fetch the movie details');
         }
+        const data = response.json()
+
+        return data;
     }
     catch(error){
         console.log(error)
