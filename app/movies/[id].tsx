@@ -41,7 +41,7 @@ const MoiveDetails = () => {
             <Text className="text-white text-sm font-bold">
               {Math.round(movie?.vote_average ?? 0) }/ 10
             </Text>
-            <Text className="text-light-200 text-sm">({movie?.vote_count} votes)</Text>
+            <Text className="text-light-200 text-sm ">({movie?.vote_count} votes)</Text>
           </View>
         </View>
       </ScrollView>
