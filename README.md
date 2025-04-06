@@ -2,7 +2,7 @@
 
 A feature-rich mobile application for discovering, exploring, and saving your favorite movies. Built with cutting-edge technologies to deliver a seamless user experience.
 
-## ✨ Features
+## Features
 
 ### Core Functionality
 -  Browse trending, latest, and upcoming movies
