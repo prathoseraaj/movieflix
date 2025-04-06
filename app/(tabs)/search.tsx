@@ -17,7 +17,7 @@ const search = () => {
     loading,
     error,
     refetch: loadMovies,
-    reset,
+    reset, 
   } = useFetch(() => fetchMovies({ query: searchquery }), false);
 
   useEffect(() => {
