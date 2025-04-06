@@ -5,18 +5,18 @@ A feature-rich mobile application for discovering, exploring, and saving your fa
 ## ✨ Features
 
 ### Core Functionality
-- 🎥 Browse trending, latest, and upcoming movies
-- 🔍 Powerful search with real-time results
-- ❤️ Save favorites to your personal collection
-- 👤 User profile management
+-  Browse trending, latest, and upcoming movies
+-  Powerful search with real-time results
+-  Save favorites to your personal collection
+-  User profile management
 
 ### Technical Highlights
-- ⚡ Real-time data sync with Appwrite backend
-- 🎨 Beautiful UI with NativeWind (Tailwind for React Native)
-- 🗺️ Intuitive navigation with Expo Router
-- 📱 Optimized for both iOS and Android
+-  Real-time data sync with Appwrite backend
+-  Beautiful UI with NativeWind (Tailwind for React Native)
+-  Intuitive navigation with Expo Router
+-  Optimized for both iOS and Android
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Category          | Technology       |
 |-------------------|------------------|
