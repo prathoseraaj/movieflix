@@ -1,4 +1,4 @@
-# 🎬 MoviePlix - Modern Movie Discovery App
+# MoviePlix - Modern Movie Discovery App
 
 A feature-rich mobile application for discovering, exploring, and saving your favorite movies. Built with cutting-edge technologies to deliver a seamless user experience.
 
